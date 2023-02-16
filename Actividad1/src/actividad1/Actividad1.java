@@ -20,12 +20,8 @@ public class Actividad1
     {
         int edad = 0, registro = 0, promedio = 0, opc = 0;
         String nombreAlumno = null, apellidoAlumno = null;
-        Alumno Ivan = new Alumno();
-        Alumno Charlie = new Alumno(2211011,
-                20,
-                "Ivan",
-                "Ramirez",
-                20);
+        Alumno Objeto1 = new Alumno();
+        Alumno Objeto2 = new Alumno();
 
         Scanner lector = new Scanner(System.in);
         while (opc != 5)
@@ -46,38 +42,67 @@ public class Actividad1
                     edad = lector.nextInt();
                     System.out.println("Ingerese el Promedio del alumno:");
                     promedio = lector.nextInt();
-                    Ivan.setApellido(apellidoAlumno);
-                    Ivan.setNombre(nombreAlumno);
-                    Ivan.setEdad(edad);
-                    Ivan.setPromedio(promedio);
-                    Ivan.setRegistro(registro);
+                    Objeto1.setApellido(apellidoAlumno);
+                    Objeto1.setNombre(nombreAlumno);
+                    Objeto1.setEdad(edad);
+                    Objeto1.setPromedio(promedio);
+                    Objeto1.setRegistro(registro);
                     System.out.flush();
                     break;
                 case 2:
                     System.out.println(
                             "Nombre del alumno:" + nombreAlumno);
-                    nombreAlumno = Ivan.getNombre();
+                    nombreAlumno = Objeto1.getNombre();
                     System.out.println(
                             "Apellido del alumno: " + apellidoAlumno);
-                    apellidoAlumno = Ivan.getApellido();
+                    apellidoAlumno = Objeto1.getApellido();
                     System.out.println("Edad del alumno:" + edad);
-                    edad = Ivan.getEdad();
+                    edad = Objeto1.getEdad();
                     System.out.println(
                             "Registro del alumno:" + registro);
-                    registro = Ivan.getRegistro();
+                    registro = Objeto1.getRegistro();
                     System.out.println(
                             "Promedio del alumno:" + promedio);
-                    promedio = Ivan.getPromedio();
+                    promedio = Objeto1.getPromedio();
                     System.out.flush();
                     break;
                 case 3:
-
+                    System.out.println("Ingerese el Nombre del alumno:");
+                    nombreAlumno = lector.next();
+                    System.out.println("Ingerese el Apellido del alumno:");
+                    apellidoAlumno = lector.next();
+                    System.out.println("Ingerese el Registro del alumno:");
+                    registro = lector.nextInt();
+                    System.out.println("Ingerese el Edad del alumno:");
+                    edad = lector.nextInt();
+                    System.out.println("Ingerese el Promedio del alumno:");
+                    promedio = lector.nextInt();
+                    Objeto2.setApellido(apellidoAlumno);
+                    Objeto2.setNombre(nombreAlumno);
+                    Objeto2.setEdad(edad);
+                    Objeto2.setPromedio(promedio);
+                    Objeto2.setRegistro(registro);
+                    System.out.flush();
                     break;
                 case 4:
-
+                    System.out.println(
+                            "Nombre del alumno:" + nombreAlumno);
+                    nombreAlumno = Objeto2.getNombre();
+                    System.out.println(
+                            "Apellido del alumno: " + apellidoAlumno);
+                    apellidoAlumno = Objeto2.getApellido();
+                    System.out.println("Edad del alumno:" + edad);
+                    edad = Objeto2.getEdad();
+                    System.out.println(
+                            "Registro del alumno:" + registro);
+                    registro = Objeto2.getRegistro();
+                    System.out.println(
+                            "Promedio del alumno:" + promedio);
+                    promedio = Objeto2.getPromedio();
+                    System.out.flush();
                     break;
                 case 5:
-
+                    System.exit(0);
                     break;
             }
 
